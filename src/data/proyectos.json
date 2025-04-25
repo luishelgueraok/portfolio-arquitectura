@@ -1,0 +1,193 @@
+{
+    "proyectos": [
+      {
+        "id": "1",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-1",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "2",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-2",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "3",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-3",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "4",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-4",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "5",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-5",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "6",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-6",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "7",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-7",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "8",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-8",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      },
+      {
+        "id": "9",
+        "titulo": "Casa VF",
+        "slug" : "casa-vf-9",
+        "categorias": "Interiorismo, Renders",
+        "descripcion": "El objetivo fue reorganizar los espacios del living-comedor y la galería con asador, además de mejorar el diseño interior y el aspecto visual de los ambientes.\nEn esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. Se renovaron completamente el mobiliario y los colores, manteniendo la iluminación existente. En la cocina, se cambió el color de las paredes para armonizar con el resto de los espacios. Además, en la galería, se diseñó un importante mueble para el TV, optimizando la funcionalidad y el estilo del ambiente.",
+        "cliente": "Particular",
+        "ubicacion": "Alberdi, Tucuman, Argentina",
+        "imagenes": [
+          "/images/proyectos/casa-vf-1.png",
+          "/images/proyectos/casa-vf-2.png",
+          "/images/proyectos/casa-vf-3.png",
+          "/images/proyectos/casa-vf-4.png",
+          "/images/proyectos/casa-vf-5.png",
+          "/images/proyectos/casa-vf-6.png",
+          "/images/proyectos/casa-vf-7.png",
+          "/images/proyectos/casa-vf-8.png",
+          "/images/proyectos/casa-vf-9.png",
+          "/images/proyectos/casa-vf-10.png"
+        ]
+      }
+    ]
+  }

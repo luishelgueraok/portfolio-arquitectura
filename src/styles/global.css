@@ -1,0 +1,21 @@
+/* 
+@import "tailwindcss";
+*/
+
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #C25E69;
+  --color-secondary: #8A3A64;
+  --color-beige: #E9CBB0;
+  --color-gray-light: #F6F3F0;
+  --color-gray-medium: #B4AFAF;
+  --color-black-soft: #2A2A2A;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}

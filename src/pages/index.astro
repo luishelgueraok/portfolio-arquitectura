@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+//import Header from '../components/Header.svelte';
+import Slider from '../components/Slider.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Contacto from '../components/Contacto.astro';
+import Footer from '../components/Footer.astro';
+
+const { acercaDeMi } = await import('../data/web.json');
+const { infoContacto } = await import('../data/web.json');
+const { sliders } = await import('../data/web.json');
+const { proyectos } = await import('../data/proyectos.json');
+---
+
+<Layout title="Inicio">
+  <Header infoContacto={infoContacto} />
+  <main>
+
+    <Slider slides={sliders} />
+
+    <Proyectos proyectos={proyectos.slice(0, 6)} infoContacto={infoContacto} />
+
+    <Contacto acercaDeMi={acercaDeMi} />
+
+  </main>
+  <Footer infoContacto={infoContacto} />
+</Layout>

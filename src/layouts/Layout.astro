@@ -1,0 +1,38 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+const { title = 'Portfolio' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <style>
+    :root {
+      --color-primary: #C25E69;
+      --color-secondary: #8A3A64;
+      --color-beige: #E9CBB0;
+    }
+  </style>
+
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+</head>
+<body class="min-h-screen flex flex-col">
+  <slot />
+  
+  <!-- Esto asegura que el footer siempre quede abajo -->
+  <style is:global>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+    }
+  </style>
+</body>
+</html>

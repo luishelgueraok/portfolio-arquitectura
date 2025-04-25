@@ -1,0 +1,63 @@
+---
+const { acercaDeMi } = Astro.props;
+---    
+    <!-- Sección Acerca de Mí + Contacto -->
+    <section id="acerca-contacto" class="py-20" style="background-color: var(--color-beige)">
+        <div class="container mx-auto px-6 max-w-6xl">
+          <h2 class="text-3xl font-bold mb-12 text-center" style="color: var(--color-secondary)">
+            Acerca de mí / Contacto
+          </h2>
+  
+          <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Acerca de Mí -->
+            <div class="lg:w-3/5 gap-6">
+              <img 
+                src={acercaDeMi.foto} 
+                alt="Erika Obrist - Arquitecta" 
+                class="float-left rounded-lg shadow-xl object-cover mr-5 mb-5"
+                loading="lazy"
+                width="150"
+                height="150"
+              />
+              <!--p class="text-lg leading-relaxed text-gray-700"-->
+              <p set:html={acercaDeMi.descripcion} class="text-lg leading-snug text-gray-700">
+              </p>
+            </div>
+  
+            <!-- Contacto -->
+            <div class="lg:w-2/5">
+              <h3 class="text-2xl font-semibold mb-6" style="color: var(--color-primary)">
+                Envíame un mensaje
+              </h3>
+              <form class="space-y-4" action="https://formspree.io/f/mjkwvjea" method="POST">
+                <div>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="Email"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" 
+                    style="focus:ring-color: var(--color-primary)"
+                  />
+                </div>
+                <div>
+                  <textarea 
+                    id="mensaje" 
+                    name="mensaje" 
+                    rows="4" 
+                    required 
+                    placeholder="Mensaje"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" 
+                    style="focus:ring-color: var(--color-primary)"
+                  ></textarea>
+                </div>
+                <button type="submit" class="px-6 py-3 rounded-lg text-white font-medium hover:opacity-90 transition-opacity" style="background-color: var(--color-primary)">
+                  Enviar Mensaje
+                </button>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </section>

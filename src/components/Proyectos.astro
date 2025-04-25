@@ -1,0 +1,39 @@
+---
+// src/components/Proyectos.astro
+import type { Proyecto } from '../types';
+const { proyectos } = Astro.props;
+const { infoContacto } = Astro.props;
+---
+<section id="proyectos" class="container mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-12 text-center" style="color: var(--color-secondary)">
+    Proyectos / portfolio
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {proyectos.map((proyecto) => (
+      <a 
+        href={`/proyectos/${proyecto.slug}`} 
+        class="group block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+      >
+        <div class="relative overflow-hidden h-64">
+          <img
+            src={proyecto.imagenes[0]}
+            alt={proyecto.titulo}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300" />
+        </div>
+        <div class="p-3 bg-white">
+          <h3 class="text-lg font-semibold" style="color: var(--color-primary)">
+            {proyecto.titulo}
+          </h3>
+          <p class="text-gray-600 line-clamp-2 tracking-tighter text-sm">{proyecto.descripcion}</p>
+          <span class="inline-block mt-3 px-3 py-1 text-sm rounded-full" style="background-color: var(--color-beige)">
+            {proyecto.categorias.split(',')[0].trim()}
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

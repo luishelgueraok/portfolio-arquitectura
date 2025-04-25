@@ -1,0 +1,24 @@
+---
+// src/components/Icon.astro
+import { library, icon } from '@fortawesome/fontawesome-svg-core';
+import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+// Añade los iconos a la librería
+library.add(faInstagram, faLinkedinIn, faEnvelope);
+
+const { iconName, color = 'currentColor', size = '1x' } = Astro.props;
+
+// Obtiene el icono
+const faIcon = icon({ prefix: iconName.split(' ')[0], iconName: iconName.split(' ')[1] });
+
+// Convierte el icono a SVG
+const iconHtml = faIcon ? faIcon.html[0] : '';
+---
+{iconHtml && (
+  <span 
+    class="inline-block w-6 h-6" 
+    style={`color: ${color}`}
+    set:html={iconHtml}
+  />
+)}

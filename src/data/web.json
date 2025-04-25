@@ -1,0 +1,37 @@
+{
+    "acercaDeMi": {
+      "foto": "/images/arquitecta.jpg",
+      "descripcion": "Soy arquitecta con más de 20 años de experiencia en proyectos y obras de arquitectura. Actualmente me dedico exclusivamente al diseño de <strong>arquitectura residencial</strong> y a la <strong>renderización profesional</strong>, con especialización en Medio Ambiente Visual e Iluminación Eficiente. Me enfoco en crear espacios habitables, armónicos y funcionales, ofreciendo <strong>soluciones visuales de calidad</strong>. <br/>Colaboro con <strong>clientes particulares</strong>, <strong>diseñadores</strong> y <strong>estudios de arquitectura</strong>. Si buscás darle vida a tus diseños, escribime por mensaje o contactame a traves de mis redes."
+    },
+    "infoContacto": {
+      "email": "contacto@erikaobrist.com.ar",
+      "instagram": "https://www.instagram.com/erikaobrist/",
+      "linkedin": "https://www.linkedin.com/in/erika-obrist-028416361/"
+    },
+    "sliders": [
+      {
+        "id": "1",
+        "imagen": "/images/slider/casa-vf-1.png",
+        "titulo": "Casa VF",
+        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+      },
+      {
+        "id": "2",
+        "imagen": "/images/slider/casa-vf-2.png",
+        "titulo": "Casa VF",
+        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+      },
+      {
+        "id": "3",
+        "imagen": "/images/slider/casa-vf-3.png",
+        "titulo": "Casa VF",
+        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+      },
+      {
+        "id": "4",
+        "imagen": "/images/slider/casa-vf-4.png",
+        "titulo": "Casa VF",
+        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+      }
+    ]
+  }

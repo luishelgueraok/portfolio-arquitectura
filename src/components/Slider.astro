@@ -1,0 +1,102 @@
+---
+// src/components/Slider.astro
+import type { Slide } from '../types';
+
+const { slides } = Astro.props;
+---
+
+<div class="swiper-container relative h-[80vh] w-full">
+  <div class="swiper-wrapper">
+    {slides.map((slide) => (
+      <div class="swiper-slide relative">
+        <img
+          src={slide.imagen}
+          alt={slide.titulo || 'Proyecto de arquitectura'}
+          class="w-full h-full object-cover"
+          width="1600"
+          height="900"
+          loading="lazy"
+          onError={(e) => {
+            e.target.style.display = 'none';
+            console.error('Error loading image:', slide.imagen);
+          }}
+        />
+
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div class="slider-overlay absolute bottom-10 left-10 right-10 p-6 max-w-2xl rounded-lg">
+          <h2 class="text-3xl font-bold mb-2 slider-title">
+            {slide.titulo}
+          </h2>
+          <p class="slider-subtitle">{slide.bajada}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="swiper-button-next" style="color: var(--color-gray-light); right: 20px"></div>
+  <div class="swiper-button-prev" style="color: var(--color-gray-light); left: 20px"></div>
+</div>
+
+<!-- Swiper CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const Swiper = window.Swiper;
+    new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      }
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+
+<style is:global>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .swiper-slide {
+    opacity: 0 !important;
+    transition: opacity 1s ease-in-out !important;
+  }
+
+  .swiper-slide-active {
+    opacity: 1 !important;
+  }
+
+  /* Fondo gris oscuro con 50% transparencia */
+  .slider-overlay {
+    background-color: rgba(30, 30, 30, 0.5);
+  }
+
+  /* Título color #c45a67 con 50% transparencia */
+  .slider-title {
+    color: rgba(196, 90, 103, 0.8);
+  }
+
+  /* Bajada en blanco con 50% transparencia */
+  .slider-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+</style>
