@@ -1,0 +1,123 @@
+---
+// src/components/SliderCarrouselProyecto.astro
+import type { Slide } from '../types';
+
+const { slides } = Astro.props;
+---
+
+<swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="10" zoom="true" navigation="true" pagination="true" pagination-clickable="true">
+    {slides.map((slide) => (
+      <swiper-slide>
+        <img
+          src={slide.imagen}
+          alt={slide.titulo || 'Proyecto de arquitectura'}
+          loading="lazy"
+        />
+      </swiper-slide>
+    ))}
+</swiper-container>
+
+
+<swiper-container class="mySwiper2" loop="true" space-between="10" slides-per-view="4" free-mode="true" watch-slides-progress="true">
+  {slides.map((slide) => (
+    <swiper-slide>
+      <img
+        src={slide.imagen}
+        alt={slide.titulo || 'Proyecto de arquitectura'}
+        loading="lazy"
+      />
+    </swiper-slide>
+  ))}
+</swiper-container>
+
+
+
+<!-- Swiper CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+<!--script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+<style>
+  
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: sw </swiper-slidek;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mySwiper {
+    height: 80%;
+    width: 100%;
+  }
+
+  .mySwiper2 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper2 swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  swiper-slide img {
+    display: sw </swiper-slidek;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

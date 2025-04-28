@@ -2,7 +2,7 @@
 // src/pages/proyectos/[slug].astro
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
-import Slider from '../../components/Slider.astro';
+import SliderCarrouselProyecto from '../../components/SliderCarrouselProyecto.astro';
 import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
@@ -24,10 +24,10 @@ const { proyecto } = Astro.props;
     <p class="mb-8">{proyecto.descripcion}</p>
     
     <!-- Asegúrate que proyecto.imagenes sea un array -->
-    <Slider slides={proyecto.imagenes.map(img => ({ 
+    <SliderCarrouselProyecto slides={proyecto.imagenes.map(img => ({ 
       imagen: img, 
-      titulo: proyecto.titulo, 
-      bajada: proyecto.ubicacion 
+      // titulo: proyecto.titulo, 
+      // bajada: proyecto.ubicacion 
     }))} />
     
     <div class="text-center mt-8 mb-12">

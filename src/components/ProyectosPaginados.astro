@@ -1,0 +1,95 @@
+---
+import type { Proyecto } from '../types';
+
+const { proyectos, proyectosPorPaginaDesktop = 6 } = Astro.props;
+const totalPaginas = Math.ceil(proyectos.length / proyectosPorPaginaDesktop);
+const proyectosSerialized = JSON.stringify(proyectos);
+---
+<div id="proyectos-wrapper" class="flex flex-col items-center">
+  <div id="proyectos-grid" class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full"></div>
+
+  <div id="pagination-buttons" class="flex gap-2 mt-8">
+    {Array.from({ length: totalPaginas }, (_, i) => (
+      <button
+        type="button"
+        class="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 transition-all"
+        data-page={i + 1}
+      >
+        {i + 1}
+      </button>
+    ))}
+  </div>
+</div>
+
+<script is:inline>
+    const proyectos = JSON.parse('{JSON.stringify(proyectos)}');
+    const proyectosPorPagina = {proyectosPorPaginaDesktop};
+    const totalPaginas = {totalPaginas};
+  
+    let paginaActual = 1;
+  
+    function renderProyectos() {
+      const grid = document.getElementById('proyectos-grid');
+      if (!grid) return;
+  
+      const start = (paginaActual - 1) * proyectosPorPagina;
+      const end = start + proyectosPorPagina;
+      const proyectosPagina = proyectos.slice(start, end);
+  
+      grid.innerHTML = proyectosPagina.map(proyecto => `
+        <a href="/proyectos/${proyecto.slug}" class="group block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img src="${proyecto.imagenes[0]}" alt="${proyecto.titulo}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
+          </div>
+          <div class="p-3 bg-white">
+            <h3 class="text-lg font-semibold" style="color: var(--color-primary)">
+              ${proyecto.titulo}
+            </h3>
+            <p class="text-gray-600 line-clamp-2 tracking-tighter text-sm">${proyecto.descripcion}</p>
+            <span class="inline-block mt-3 px-3 py-1 text-sm rounded-full" style="background-color: var(--color-beige)">
+              ${proyecto.categorias.split(',')[0].trim()}
+            </span>
+          </div>
+        </a>
+      `).join('');
+    }
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProyectos();
+  
+      const buttons = document.querySelectorAll('#pagination-buttons button');
+      if (buttons.length) {
+        buttons.forEach(button => {
+          button.addEventListener('click', () => {
+            paginaActual = parseInt(button.dataset.page);
+            renderProyectos();
+            updateActiveButton();
+          });
+        });
+      }
+  
+      function updateActiveButton() {
+        const buttons = document.querySelectorAll('#pagination-buttons button');
+        buttons.forEach(button => {
+          if (parseInt(button.dataset.page) === paginaActual) {
+            button.classList.add('bg-primary', 'text-white');
+            button.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+          } else {
+            button.classList.remove('bg-primary', 'text-white');
+            button.classList.add('bg-gray-200', 'hover:bg-gray-300');
+          }
+        });
+      }
+  
+      updateActiveButton();
+    });
+  </script>
+  
+
+<style>
+  /* Agrega tu color principal en CSS si no lo tienes */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+</style>
