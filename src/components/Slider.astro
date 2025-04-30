@@ -5,14 +5,14 @@ import type { Slide } from '../types';
 const { slides } = Astro.props;
 ---
 
-<div class="swiper-container relative h-[80vh] w-full">
-  <div class="swiper-wrapper">
+<div class="swiper-container relative h-[80vh] w-full mt-[68px] overflow-hidden">
+  <div class="swiper-wrapper h-full">
     {slides.map((slide) => (
-      <div class="swiper-slide relative">
+      <div class="swiper-slide relative h-full">
         <img
           src={slide.imagen}
           alt={slide.titulo || 'Proyecto de arquitectura'}
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover" 
           width="1600"
           height="900"
           loading="lazy"
@@ -24,18 +24,18 @@ const { slides } = Astro.props;
 
         <div class="absolute inset-0 bg-black/30"></div>
 
-        <div class="slider-overlay absolute bottom-10 left-10 right-10 p-6 max-w-2xl rounded-lg">
-          <h2 class="text-3xl font-bold mb-2 slider-title">
+        <div class="slider-overlay absolute bottom-10 left-10 right-10 p-6 rounded-lg">
+          <h2 class="text-5xl font-bold mb-2 slider-title tracking-tight">
             {slide.titulo}
           </h2>
-          <p class="slider-subtitle">{slide.bajada}</p>
+          <p class="text-3xl slider-subtitle tracking-tight">{slide.bajada}</p>
         </div>
       </div>
     ))}
   </div>
 
-  <div class="swiper-button-next" style="color: var(--color-gray-light); right: 20px"></div>
-  <div class="swiper-button-prev" style="color: var(--color-gray-light); left: 20px"></div>
+  <!--div class="swiper-button-next" style="color: var(--color-gray-light); right: 20px"></div>
+  <div class="swiper-button-prev" style="color: var(--color-gray-light); left: 20px"></div-->
 </div>
 
 <!-- Swiper CDN -->
@@ -92,11 +92,12 @@ const { slides } = Astro.props;
 
   /* Título color #c45a67 con 50% transparencia */
   .slider-title {
-    color: rgba(196, 90, 103, 0.8);
+    color: rgba(199, 169, 94, 0.9);
   }
 
   /* Bajada en blanco con 50% transparencia */
   .slider-subtitle {
     color: rgba(255, 255, 255, 0.8);
   }
+  
 </style>

@@ -7,7 +7,11 @@ module.exports = {
           primary: '#C25E69',
           secondary: '#8A3A64',
           // ... (tus colores personalizados)
-        }
-      }
-    }
+        },
+        spacing: {
+          '80': '80px',          
+          '68': '68px',
+        },
+      },
+    },
   };

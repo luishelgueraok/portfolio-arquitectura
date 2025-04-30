@@ -11,27 +11,55 @@
     "sliders": [
       {
         "id": "1",
-        "imagen": "/images/slider/casa-vf-1.png",
-        "titulo": "Casa VF",
-        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+        "imagen": "/images/slider/casa-vf-4.png",
+        "titulo": "Tu proyecto, en su mejor versión",
+        "bajada": "Imágenes realistas que potencian tu presentación profesional",
+        "mobilePosition": 
+        {
+          "top": "0",
+          "left": "0",
+          "width": "10%",
+          "height": "100%"
+        }
       },
       {
         "id": "2",
-        "imagen": "/images/slider/casa-vf-2.png",
-        "titulo": "Casa VF",
-        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+        "imagen": "/images/slider/casa-dp-2.png",
+        "titulo": "Espacios que comunican",
+        "bajada": "Transforma ideas en imágenes que cuentan historias",
+        "mobilePosition": 
+        {
+          "top": "1000",
+          "left": "0",
+          "width": "100%",
+          "height": "100%"
+        }
       },
       {
         "id": "3",
-        "imagen": "/images/slider/casa-vf-3.png",
-        "titulo": "Casa VF",
-        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+        "imagen": "/images/slider/casa-gg-1.png",
+        "titulo": "Proyectá en alta definición",
+        "bajada": "Convertí tus diseños en experiencias visuales únicas",
+        "mobilePosition": 
+        {
+          "top": "0",
+          "left": "100",
+          "width": "100%",
+          "height": "100%"
+        }
       },
       {
-        "id": "4",
-        "imagen": "/images/slider/casa-vf-4.png",
-        "titulo": "Casa VF",
-        "bajada": "En esta vivienda se diseñaron los espacios de living-comedor, incorporando un sector de escritorio y TV. "
+        "id": "5",
+        "imagen": "/images/slider/casa-mm-1.png",
+        "titulo": "Imágenes que venden proyectos",
+        "bajada": "Texturas, luces y sombras que elevan tu propuesta",
+        "mobilePosition": 
+        {
+          "top": "0",
+          "left": "0",
+          "width": "100%",
+          "height": "100%"
+        }
       }
     ]
   }

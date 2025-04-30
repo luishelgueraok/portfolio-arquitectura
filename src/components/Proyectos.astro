@@ -1,11 +1,14 @@
 ---
 // src/components/Proyectos.astro
 import type { Proyecto } from '../types';
-const { proyectos } = Astro.props;
+let { proyectos } = Astro.props;
 const { infoContacto } = Astro.props;
+
+// Ordenar los proyectos por la propiedad 'orden' de manera ascendente
+proyectos = proyectos.sort((a, b) => parseInt(a.orden) - parseInt(b.orden));
 ---
-<section id="proyectos" class="container mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-12 text-center" style="color: var(--color-secondary)">
+<section id="proyectos" class="container mx-auto px-6 py-12">
+  <h2 class="text-2xl font-bold mb-8 text-center uppercase tracking-tight" style="color: var(--color-secondary)">
     Proyectos / portfolio
   </h2>
 
@@ -28,10 +31,12 @@ const { infoContacto } = Astro.props;
           <h3 class="text-lg font-semibold" style="color: var(--color-primary)">
             {proyecto.titulo}
           </h3>
-          <p class="text-gray-600 line-clamp-2 tracking-tighter text-sm">{proyecto.descripcion}</p>
-          <span class="inline-block mt-3 px-3 py-1 text-sm rounded-full" style="background-color: var(--color-beige)">
-            {proyecto.categorias.split(',')[0].trim()}
-          </span>
+          <p class="text-gray-600 line-clamp-2 tracking-tighter text-sm leading-4">{proyecto.descripcion}</p>
+          {proyecto.categorias.split(',').map(categoria => (
+            <span class="inline-block mt-2 px-3 py-1 text-sm rounded mr-1" style="background-color: var(--color-beige); font-size: 9px; text-transform: uppercase; padding: 4px; padding-left: 7px; padding-right: 7px; line-height: 17px;">
+            {categoria.trim()}
+            </span>
+            ))}
         </div>
       </a>
     ))}

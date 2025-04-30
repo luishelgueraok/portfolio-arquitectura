@@ -1,16 +1,26 @@
 ---
 const { acercaDeMi } = Astro.props;
----    
+---
+
+
+
+<script>
+// Si usas Preact o similar para manejar estado
+document.addEventListener('show-toast', (e) => {
+  // Actualizar estado aquí si es necesario
+});
+</script>
+
     <!-- Sección Acerca de Mí + Contacto -->
-    <section id="acerca-contacto" class="py-20" style="background-color: var(--color-beige)">
+    <section id="acerca-contacto" class="py-12" style="background-color: var(--color-beige)">
         <div class="container mx-auto px-6 max-w-6xl">
-          <h2 class="text-3xl font-bold mb-12 text-center" style="color: var(--color-secondary)">
+          <h2 class="text-2xl font-bold mb-8 text-center uppercase tracking-tight	" style="color: var(--color-secondary)">
             Acerca de mí / Contacto
           </h2>
   
-          <div class="flex flex-col lg:flex-row gap-12">
+          <div class="flex flex-col lg:flex-row gap-8">
             <!-- Acerca de Mí -->
-            <div class="lg:w-3/5 gap-6">
+            <div class="lg:w-3/5 gap-3">
               <img 
                 src={acercaDeMi.foto} 
                 alt="Erika Obrist - Arquitecta" 
@@ -26,10 +36,10 @@ const { acercaDeMi } = Astro.props;
   
             <!-- Contacto -->
             <div class="lg:w-2/5">
-              <h3 class="text-2xl font-semibold mb-6" style="color: var(--color-primary)">
+              <h3 class="text-2xl font-semibold mb-3" style="color: var(--color-primary)">
                 Envíame un mensaje
               </h3>
-              <form class="space-y-4" action="https://formspree.io/f/mjkwvjea" method="POST">
+              <form id="contact-form" class="space-y-4 contact-form" method="POST">
                 <div>
                   <input 
                     type="email" 
@@ -52,12 +62,125 @@ const { acercaDeMi } = Astro.props;
                     style="focus:ring-color: var(--color-primary)"
                   ></textarea>
                 </div>
-                <button type="submit" class="px-6 py-3 rounded-lg text-white font-medium hover:opacity-90 transition-opacity" style="background-color: var(--color-primary)">
+                <button type="submit" class="float-left mr-4 px-6 py-3 rounded-lg text-white font-medium hover:opacity-90 transition-opacity" style="background-color: var(--color-primary)">
                   Enviar Mensaje
                 </button>
+
               </form>
-  
+
+              <!-- Contenedor para mensajes de estado -->
+              <div id="form-message" class="form-message"></div>              
+
             </div>
           </div>
         </div>
       </section>
+
+
+      <script is:inline>
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          const form = e.target;
+          const formData = new FormData(form);
+          const messageDiv = document.getElementById('form-message');
+          
+          // Resetear mensaje previo
+          messageDiv.className = 'form-message';
+          messageDiv.textContent = '';
+          
+          const payload = {
+            perfil: "erikaobrist.com.ar",
+            remitente: "contacto@erikaobrist.com.ar",
+            destinatario: "erikaobrist@gmail.com",
+            asunto: "Consulta desde erikaobrist.com.ar",
+            email: formData.get('email'),
+            mensaje: formData.get('mensaje'),
+            html: `<p>${formData.get('mensaje').replace(/\n/g, '<br>')}</p>`
+          };
+          
+          console.log(JSON.stringify(payload));
+
+          try {
+            // Mostrar estado de "enviando"
+            messageDiv.textContent = 'Enviando mensaje...';
+            messageDiv.classList.add('visible');
+            
+            // const response = await fetch('http://149.50.149.241:3000/api/smtp/enviar', {
+            // const response = await fetch('https://www.erikaobrist.com.ar:3000/api/smtp/enviar', {
+            const response = await fetch('/api/smtp/enviar', {  
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(payload)
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok && data.success) {
+              // Mostrar éxito
+              messageDiv.textContent = '¡Mensaje enviado con éxito!';
+              messageDiv.classList.add('visible', 'success');
+              form.reset();
+              
+              // Ocultar mensaje después de 5 segundos
+              setTimeout(() => {
+                messageDiv.classList.remove('visible');
+              }, 5000);
+            } else {
+              // Mostrar error del servidor
+              const errorMsg = data.message || 'Error al enviar el mensaje';
+              messageDiv.textContent = errorMsg;
+              messageDiv.classList.add('visible', 'error');
+
+              // Ocultar mensaje después de 5 segundos
+              setTimeout(() => {
+                messageDiv.classList.remove('visible');
+              }, 5000);
+
+            }
+          } catch (error) {
+            // Mostrar error de conexión
+            console.error('Error:', error);
+            messageDiv.textContent = 'Error de conexión.';
+            messageDiv.classList.add('visible', 'error');
+
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(() => {
+              messageDiv.classList.remove('visible');
+            }, 5000);
+                        
+          }
+        });
+        </script>
+
+      <style is:global>
+        .form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  display: none;  /* Oculto por defecto */
+
+  width: 250px;
+    height: 48px;
+    line-height: 16px;
+
+}
+
+.form-message.visible {
+  display: flex;
+}
+
+.form-message.success {
+  background-color: #83bb90;
+  color: #155724;
+  border: 1px solid #568561;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+      </style>

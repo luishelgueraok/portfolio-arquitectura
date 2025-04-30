@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-//import Header from '../components/Header.svelte';
 import Slider from '../components/Slider.astro';
 import Proyectos from '../components/Proyectos.astro';
 import Contacto from '../components/Contacto.astro';
@@ -16,13 +15,9 @@ const { proyectos } = await import('../data/proyectos.json');
 <Layout title="Inicio">
   <Header infoContacto={infoContacto} />
   <main>
-
     <Slider slides={sliders} />
-
     <Proyectos proyectos={proyectos} infoContacto={infoContacto} />
-
     <Contacto acercaDeMi={acercaDeMi} />
-
   </main>
   <Footer infoContacto={infoContacto} />
 </Layout>

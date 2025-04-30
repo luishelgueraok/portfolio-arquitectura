@@ -8,16 +8,17 @@ const { title = 'Portfolio' } = Astro.props;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-01ELD5DBH5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-01ELD5DBH5');
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" />  
   <title>{title}</title>
-  <style>
-    :root {
-      --color-primary: #C25E69;
-      --color-secondary: #8A3A64;
-      --color-beige: #E9CBB0;
-    }
-  </style>
-
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
 </head>
 <body class="min-h-screen flex flex-col">

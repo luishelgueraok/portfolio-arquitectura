@@ -1,0 +1,48 @@
+---
+// Componente AcordeonDescripcion.astro
+const { descripcion, maxLength = 320 } = Astro.props;
+const isLong = descripcion.length > maxLength;
+const textoCorto = isLong ? descripcion.substring(0, maxLength) + '...' : descripcion;
+---
+
+<div class="mb-8 relative">
+  <!-- Texto corto (siempre visible si no es largo) -->
+  <span id="texto-corto" class={isLong ? '' : 'hidden'}>{textoCorto}</span>
+  
+  <!-- Texto completo (oculto inicialmente si es largo) -->
+  <span id="texto-completo" class={isLong ? 'hidden' : ''}>{descripcion}</span>
+  
+  <!-- Botón (solo visible si es largo) -->
+  {isLong && (
+    <button 
+      id="toggle-btn"
+      class="text-blue-500 hover:underline ml-1"
+      onclick="
+        const corto = document.getElementById('texto-corto');
+        const completo = document.getElementById('texto-completo');
+        const btn = this;
+        
+        if (completo.classList.contains('hidden')) {
+          corto.classList.add('hidden');
+          completo.classList.remove('hidden');
+          btn.textContent = 'mostrar menos';
+          btn.classList.add('static');
+        } else {
+          corto.classList.remove('hidden');
+          completo.classList.add('hidden');
+          btn.textContent = 'leer completo...';
+          btn.classList.remove('static');
+        }
+      "
+    >
+      leer completo...
+    </button>
+  )}
+</div>
+
+<style>
+  .relative { position: relative; }
+  .absolute { position: absolute; }
+  .static { position: static; }
+  .hidden { display: none; }
+</style>

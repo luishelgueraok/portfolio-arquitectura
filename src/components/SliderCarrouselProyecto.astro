@@ -5,7 +5,7 @@ import type { Slide } from '../types';
 const { slides } = Astro.props;
 ---
 
-<swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="10" zoom="true" navigation="true" pagination="true" pagination-clickable="true">
+<swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="10" zoom="true" navigation="true" pagination="true" pagination-clickable="true" zoom="true">
     {slides.map((slide) => (
       <swiper-slide>
         <img
@@ -33,7 +33,7 @@ const { slides } = Astro.props;
 
 
 <!-- Swiper CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <!--script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script-->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
